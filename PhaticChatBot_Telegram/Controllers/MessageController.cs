@@ -20,11 +20,19 @@ namespace PhaticChatBot_Telegram.Controllers
 
             foreach (var command in commands)
             {
-                if (message.Type == Telegram.Bot.Types.Enums.MessageType.Text && command.Contains(message.Text))
+                if(message.Type == Telegram.Bot.Types.Enums.MessageType.Text)
                 {
-                    command.Execute(message, client);
-                    break;
+                    if (command.Contains(message.Text))
+                    {
+                        command.Execute(message, client);
+                        break;
+                    }
+                    else
+                    {
+
+                    }
                 }
+                
             }
             return Ok();
         }

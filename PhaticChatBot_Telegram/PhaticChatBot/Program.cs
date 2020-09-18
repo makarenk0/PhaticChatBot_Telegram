@@ -16,20 +16,20 @@ namespace PhaticChatBot
             //string output = word.Value;
             //Console.WriteLine(output);
 
-            CommandsHandler handler = new CommandsHandler("patterns.json");
-            PatternsFinder finder = new PatternsFinder("patterns.json");
-            while (handler.IsWorking)
-            {
-                string input = Console.ReadLine();
-                if (input.StartsWith("/"))
-                {
-                    Console.WriteLine(handler.HandleCommands(input.Substring(1)));
-                }
-                else
-                {
-                    Console.WriteLine();
-                }
-            }
+            //CommandsHandler handler = new CommandsHandler("patterns.json");
+            //PatternsFinder finder = new PatternsFinder("patterns.json");
+            //while (handler.IsWorking)
+            //{
+            //    string input = Console.ReadLine();
+            //    if (input.StartsWith("/"))
+            //    {
+            //        Console.WriteLine(handler.HandleCommands(input.Substring(1)));
+            //    }
+            //    else
+            //    {
+            //        Console.WriteLine();
+            //    }
+            //}
             //HashSet<string> verbs = new HashSet<string>();
             //using (StreamReader file = new StreamReader("verbs.txt"))
             //{

@@ -1,8 +1,5 @@
 ﻿using PhaticChatBot_Telegram.Models.Commands;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Web;
 using Telegram.Bot;
 
@@ -28,6 +25,7 @@ namespace PhaticChatBot_Telegram.Models
 
             _commandsList = new List<Command>();
             _commandsList.Add(new SpeechCommand(HttpContext.Current.Server.MapPath("/App_Data/patterns.json")));
+            _commandsList.Add(new InternalCommand(HttpContext.Current.Server.MapPath("/App_Data/patterns.json")));
 
             client = new TelegramBotClient(AppSettings.Key);
             var hook = string.Format(AppSettings.Url, "api/message/update");

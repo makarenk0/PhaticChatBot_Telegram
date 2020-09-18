@@ -2,43 +2,50 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Runtime.Remoting.Messaging;
 using System.Text;
 
 namespace PhaticChatBot
 {
     class CommandsHandler
     {
-        private bool _working;
         private string _patternsFileNameJSON;
+        private static string _helpInfo = "nothing here yet";
+        private static string _keyForStorage = "14032001";
 
-        #region Getters&Setters
-        public bool IsWorking
-        {
-            get { return _working; }
-            set { _working = value; }
-        }
+       
 
-        #endregion
 
         public CommandsHandler(string patternsFileNameJSON)
         {
-            IsWorking = true;
             _patternsFileNameJSON = patternsFileNameJSON;
         }
        
         public string HandleCommands(string command)
         {
-            switch (command)
+            string[] words = command.Split(' ');
+            switch (words[0])
             {
-                case "quit":
-                    IsWorking = false;
-                    break;
+                case "help":
+                    return _helpInfo;
                 case "info":
                     return GetBotInfo();
+                case "add" :
+                    if (words.Length == 4) return words[1] == _keyForStorage ? AddNewWords(words) : "Invalid storage key!";
+                    else return String.Concat("Please enter 4 parametrs: /add <storage key> <words type> <word to add>\n", GetBotInfo());
                 default:
                     return "Command not found!";
             }
-            return "Success!";
+        }
+
+        private string AddNewWords(string[] words)
+        {
+            using (StreamWriter file = new StreamWriter(_patternsFileNameJSON))
+            using (JsonTextWriter reader = new JsonTextWriter(file))
+            {
+                
+            }
+            return "Is developing now";
         }
 
         private string GetBotInfo()

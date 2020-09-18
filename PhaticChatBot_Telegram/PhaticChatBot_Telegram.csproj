@@ -142,6 +142,7 @@
     <Compile Include="Models\AppSettings.cs" />
     <Compile Include="Models\Bot.cs" />
     <Compile Include="Models\Commands\Command.cs" />
+    <Compile Include="Models\Commands\InternalCommand.cs" />
     <Compile Include="Models\Commands\SpeechCommand.cs" />
     <Compile Include="PhaticChatBot\CommandsHandler.cs" />
     <Compile Include="PhaticChatBot\PatternsFinder.cs" />

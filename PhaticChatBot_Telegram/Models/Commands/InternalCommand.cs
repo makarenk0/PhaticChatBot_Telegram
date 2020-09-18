@@ -8,18 +8,15 @@ using Telegram.Bot.Types;
 
 namespace PhaticChatBot_Telegram.Models.Commands
 {
-    public class SpeechCommand : Command
+    public class InternalCommand : Command
     {
-        private PatternsFinder finder;
-
         public override string Name => "";
+        private CommandsHandler handler;
 
-
-        public SpeechCommand(string patternsFileNameJSON)
+        public InternalCommand(string patternsFileNameJSON)
         {
-            finder = new PatternsFinder(patternsFileNameJSON);
+            handler = new CommandsHandler(patternsFileNameJSON);
         }
-
 
         public override void Execute(Message message, TelegramBotClient client)
         {
@@ -27,14 +24,8 @@ namespace PhaticChatBot_Telegram.Models.Commands
             var messageId = message.MessageId;
 
             if (!String.IsNullOrEmpty(message.Text))
-                client.SendTextMessageAsync(chatId, finder.GetPatternAnswer(message.Text));
+                client.SendTextMessageAsync(chatId, handler.HandleCommands(message.Text.Replace("/", "")));
             else client.SendTextMessageAsync(chatId, "What's this?");
-
-        }
-
-        public override bool Contains(string command)
-        {
-            return !command.Contains("/");
         }
     }
 }
