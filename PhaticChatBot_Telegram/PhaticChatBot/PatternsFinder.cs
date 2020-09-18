@@ -90,8 +90,9 @@ namespace PhaticChatBot
             var answerP = CheckForPatternStatements(input);
             if (answerP.Key) return answerP.Value;
 
+            //Third try(cant recognize pattrens)
 
-            return input;
+            return ChooseRandomly("Sorry, I dont understand you|Can you tell me this in other words?|Can you describe more accurately?");
         }
 
         private string[] GetSpecialCaseWords(string input)
@@ -112,10 +113,11 @@ namespace PhaticChatBot
 
             foreach (KeyValuePair<string, string> pattern in _patterns["Statements"])
             {
-                bool fits = true;
-                int j = 0;
                 string[] wordsPatterns = pattern.Key.Split(' ');
-                for (int i = 0; i < wordsPatterns.Length && j < bareInputArr.Length; i++)
+                int patternWordsNum = wordsPatterns.Count(x => !x.Contains("("));
+                bool fits = casteInputArr.Length >= patternWordsNum ? true : false;
+                int j = 0;
+                for (int i = 0; i < wordsPatterns.Length && j < bareInputArr.Length && fits; i++)
                 {
                     if ((wordsPatterns[i].StartsWith("(")
                        && GetSpecialCaseWords(wordsPatterns[i]).Contains(bareInputArr[j])))
@@ -150,7 +152,7 @@ namespace PhaticChatBot
                                 output = String.Concat(output, toReplaceNext ? GetReplacement(_cutWords[word].First.Value) : _cutWords[word].First.Value, " ");
                                 _cutWords[word].RemoveFirst();
                                 toReplaceNext = false;
-                            } 
+                            }
                         }
                         else if (word == "*")
                         {

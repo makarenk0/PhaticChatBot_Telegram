@@ -1,14 +1,19 @@
 {
 	"Statements" : { 
-		"* (hello|hi|hey|)" : "Hello!|hi|Greetings",
+		"* (hello|hi|hey|)" : "Hello!|hi|Greetings|Hey)",
+		"* (yes)" : "That's awesome!|)|(",
+		"* (no)" : "That's great!|)|(",
 
-		">s (how) >v (are) >p (you) >v (doing)" : "I'm great thanks)",
+
+		">s (how) >v (are) >p (you)" : "I'm great thanks)",
 		">s (how) >v (do) >p (you) >v (do)" : "I'm fine thanks)",
 
 		">a * >v *" : "Why * >v * ?",
+		"* >v *" : "Why * >v * ?",
 		">v *" : "I don't think i can >v . What about you?",
 
-		"* *" : "Is it * or not?",
+
+		"* *" : "Is it * or not?|Can you describe * ?|I cant remeber what is *",
 		">a * *" : "Is it * or not?",
 
 
@@ -17,34 +22,36 @@
 		">p >v (am) >a *" : "Are >r >p really >a * ? Tell me about this something.|Is it true? Are you >a * ?",
 		">p >v (am) *" : "Are >r >p really * ? Tell me about this something.|Is it true? Are you * ?",
 
-		">p (you) >v (are|is) >a *" : "Am >r >p really >a * ? Tell me about this something.|Is it true? Am i >a * ?",
-		">p (you) >v (are|is) *" : "Am >r >p really * ? Tell me about this something.|Is it true? Am i * ?",
+		">p (you) >v (are) >a *" : "Am >r >p really >a * ? Tell me about this something.|Is it true? Am i >a * ?",
+		">p (you) >v (are) *" : "Am >r >p really * ? Tell me about this something.|Is it true? Am i * ?",
 
 		">p >v (are|is) >a *" : " >v >r >p really >a * ? Tell me about this something.|Is it true? >v >r >p >a * ?",
 		">p >v (are|is) *" : " >v >r >p really * ? Tell me about this something.|Is it true? >v >r >p * ?",
 
 
 
-		">p (he|she) >v (can|could) >v" : "What else >v >p do ?",
+		">p (he|she) >v (can|could|should|may|might|must|will) >v" : "What else >v >p do ?",
 		">p (he|she) >v >a *" : "What else does >p >v ?",
 		">p (he|she) >v *" : "What else does >p >v ?",
 		">p (he|she) >v >v" : "What else does >p >v ?",
 
 
-		">p >v (can|could) >v" : "What else >r >v >p do ?",
-		">p >v >a *" : "What else do >r >p >v ?",
-		">p >v >v" : "What else do >r >p >v ?",
-		">p >v *" : "What else do >r >p >v ?",
-		">p >v" : "What else do >r >p >v ?",
+		">p >v (can|could|should|may|might|must|will) >v" : "What else >r >v >r >p do ?",
+		">p >v >a *" : "What else do >r >p >r >v ?",
+		">p >v *" : "What else do >r >p >r >v ?",
+		">p >v >v" : "What else do >r >p >r >v ?",
+		">p >v" : "What else do >r >p >r >v ?",
 
 		">s (what) >v (is) * (your) * (name)" : "My name is Phillip",
+		">s (what) >v (is) * (your) * (language)" : "My native language is C#",
 		">s (what) >v >a *" : "Maybe * >v >a thing?|Maybe * >v >a some virtual stuff?|Maybe * >v >a fiction?",
-		">s (what) >v >p >v" : "Apples|Pears|Cherry|Banana",
+		">s (what) >v >p >v" : "Apples|Pears|Cherry|Banana|",
 
 		">s (when) >v >p >v" : "Tommorow at 3 o'clock|At 5 o'clock|Yesterday|At 17 September",
 
 		">s (where) >v >p >v" : "Not far from here|On the main square|In another city|In Africa",
-		">s (where) >v >p * (from)" : "From Kyiv",
+
+		">s (where) >v >p *" : "From Kyiv",
 
 		">s (which) * >v >p >v" : "Green one|Hard one|Special one|The greatest one",
 
@@ -57,11 +64,12 @@
 		">s (whose) >v *" : "My|Mr. Adams'|Definitely not mine|Mr. Smith's",
 
 		">s (how) * (long|far)" : "5 steps",
-		">s (how) * (many|much)" : "a lot",
+		">s (how) * (many|much)" : "a lot|1000|1|0|-1|Array out of bound! Ha, ha, joking)",
 		">s (how) * (old)" : "2 years|5 seconds|10 minutes",
 
 		">s (why) >v >p >v" : "Because i'm not so smart|Because i'm you|Because it's terrible|Because i'm bot",
-		"*" : "Sorry, I dont understand you|Can you tell me this in other words?"
+		">s (why) >v >p" : "Because >r >p not a bot|Because it's funny"
+		
 	},
 	"Replacements" : {
 		"i" : "you",

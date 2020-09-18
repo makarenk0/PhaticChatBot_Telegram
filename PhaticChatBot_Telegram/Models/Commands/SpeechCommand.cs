@@ -20,12 +20,12 @@ namespace PhaticChatBot_Telegram.Models.Commands
             finder = new PatternsFinder(patternsFileNameJSON);
         }
 
+
         public override void Execute(Message message, TelegramBotClient client)
         {
             var chatId = message.Chat.Id;
             var messageId = message.MessageId;
 
-           
             if (message.Type == Telegram.Bot.Types.Enums.MessageType.Text && !String.IsNullOrEmpty(message.Text))
                 client.SendTextMessageAsync(chatId, finder.GetPatternAnswer(message.Text));
             else { client.SendTextMessageAsync(chatId, "What's this?"); }
