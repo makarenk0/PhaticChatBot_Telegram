@@ -146,7 +146,6 @@
     <Compile Include="Models\Commands\SpeechCommand.cs" />
     <Compile Include="PhaticChatBot\CommandsHandler.cs" />
     <Compile Include="PhaticChatBot\PatternsFinder.cs" />
-    <Compile Include="PhaticChatBot\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
