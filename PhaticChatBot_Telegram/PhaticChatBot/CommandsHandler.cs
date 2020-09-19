@@ -10,11 +10,8 @@ namespace PhaticChatBot
     class CommandsHandler
     {
         private string _patternsFileNameJSON;
-        private static string _helpInfo = "nothing here yet";
-        private static string _keyForStorage = "14032001";
-
-       
-
+        private static string _helpInfo = "Use simple structures of sentences to interact with bot\nYou can ask or tell him something";
+        private static string _keyForStorage = "1111";
 
         public CommandsHandler(string patternsFileNameJSON)
         {
@@ -26,6 +23,8 @@ namespace PhaticChatBot
             string[] words = command.Split(' ');
             switch (words[0])
             {
+                case "start":
+                    return "Start your conversation";
                 case "help":
                     return _helpInfo;
                 case "info":

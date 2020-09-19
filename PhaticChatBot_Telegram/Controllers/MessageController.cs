@@ -27,10 +27,6 @@ namespace PhaticChatBot_Telegram.Controllers
                         command.Execute(message, client);
                         break;
                     }
-                    else
-                    {
-
-                    }
                 }
                 
             }

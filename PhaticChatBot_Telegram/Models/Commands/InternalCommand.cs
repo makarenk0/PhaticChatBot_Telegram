@@ -24,8 +24,13 @@ namespace PhaticChatBot_Telegram.Models.Commands
             var messageId = message.MessageId;
 
             if (!String.IsNullOrEmpty(message.Text))
-                client.SendTextMessageAsync(chatId, handler.HandleCommands(message.Text.Replace("/", "")));
+                client.SendTextMessageAsync(chatId, handler.HandleCommands(message.Text.Replace("#", "")));
             else client.SendTextMessageAsync(chatId, "What's this?");
+        }
+
+        public override bool Contains(string command)
+        {
+            return command.Contains("/");
         }
     }
 }
