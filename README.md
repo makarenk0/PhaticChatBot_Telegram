@@ -41,5 +41,7 @@ Patterns finder reads object from top to the bottom <br>
 :arrow_double_down:
 which means that you have to place more _**specific patterns higher**_ and _**general ones - lower**_ <br>
 ## Libs, frameworks and deployment<br>
-**Frameworks:** _**.NET Framework 4.7.2, ASP.NET 3.0**_
-**Libs:** _**Porter2Stemmer(), Telegram.Bot()**_
+**Frameworks:** _**.NET Framework 4.7.2, ASP.NET 3.0**_ <br>
+**Libs:**  _**[Porter2Stemmer](https://github.com/nemec/porter2-stemmer),  [Telegram.Bot](https://github.com/TelegramBots/Telegram.Bot)**_<br>
+**Deployed to _Microsoft Azure_**<br>
+**Interaction with Telegram through _webhooks_**
