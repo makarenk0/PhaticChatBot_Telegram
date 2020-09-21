@@ -2,8 +2,10 @@
 ### Chat bot which maintains phatic dialogue with user.
 
 ## Guide
-Just search in telegram `@PhaticChatBot`or just go to [PhaticChatBot](https://t.me/PhaticChatBot)<br>
-Start conversation with him.
+**For users:**<br>
+**Just search in telegram `@PhaticChatBot`or just go to [PhaticChatBot](https://t.me/PhaticChatBot)**<br>
+**Start conversation with him.**<br><br>
+**For owners:** <br>
 Chat bot has some commands:
 + `/help` - helping information
 + `/info` - short information about storage content
