@@ -45,6 +45,8 @@ namespace PhaticChatBot
                     if (words.Length == 4) return words[1] == _keyForStorage ? AddNewWords(words) : "Invalid storage key!";
                     else return String.Concat("Please enter 4 parametrs: /add <storage key> <words type> <word to add>\n", GetBotInfo());
                 case "metric":
+                    if (words.Length == 1) return "Please enter 1 parametr: /metric <metric type>\nParametrs: cpu_percentage, cpu_average, memory_available," +
+                             "requests_failed, requests_failed, requests_queue, requests_count";
                     switch (words[1])
                     {
                         case "cpu_percentage":

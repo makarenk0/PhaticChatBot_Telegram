@@ -10,6 +10,7 @@ Chat bot has some commands:
 + `/help` - helping information
 + `/info` - short information about storage content
 + `/add <storage key> <word types to add> <word to add>`<br> - adding new words(only words, not sentences patterns) to storage(not working yet)
++ `/metric` - used to display some metrics, for example cpu use percentage, available RAM etc.
 <br>
 This commands is supposed to simplify `patterns.json` updating<br>
 
