@@ -20,6 +20,7 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
+		EnterpriseLibraryConfigurationToolBinariesPath = packages\Unity.2.1.505.0\lib\NET35;packages\Unity.Interception.2.1.505.0\lib\NET35;packages\EnterpriseLibrary.Common.5.0.505.0\lib\NET35;packages\EnterpriseLibrary.WindowsAzure.Autoscaling.5.0.1118.2\lib\NET4;packages\EnterpriseLibrary.WindowsAzure.Autoscaling.5.0.1118.2\DesignTime
 		SolutionGuid = {8A088B12-6BBC-4D63-BE97-A896D47C0613}
 	EndGlobalSection
 EndGlobal

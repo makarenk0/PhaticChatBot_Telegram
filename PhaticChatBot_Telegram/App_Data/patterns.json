@@ -1,8 +1,9 @@
 {
 	"Statements" : { 
-		"* (hello|hi|hey|)" : "Hello!|hi|Greetings|Hey)",
+		"* (hello|hi|hey)" : "Hello!|hi|Greetings|Hey)",
 		"* (yes)" : "That's awesome!|)|(",
 		"* (no)" : "That's great!|)|(",
+		"* (okay|ok|nice)" : "Great",
 
 
 		">s (how) >v (are) >p (you)" : "I'm great thanks)",
@@ -68,7 +69,8 @@
 		">s (how) * (old)" : "2 years|5 seconds|10 minutes",
 
 		">s (why) >v >p >v" : "Because i'm not so smart|Because i'm you|Because it's terrible|Because i'm bot",
-		">s (why) >v >p" : "Because >r >p not a bot|Because it's funny"
+		">s (why) >v >p" : "Because >r >p am not a bot|Because it's funny",
+		">s (why)" : "Because it's true"
 		
 	},
 	"Replacements" : {
@@ -84,7 +86,7 @@
 	"Pronouns" : ["i", "you", "they", "he", "she", "it", "we"],
 	"Articles" : ["a", "an", "the"],
 	"SpecialQuestions" : ["what", "when", "where", "which", "who", "whom", "whose", "why", "how"],
-	"IgnoreList" : ["?", ".", ",", "!", "also", "too", "for", "some", "but"],
+	"IgnoreList" : ["?", ".", ",", "!", "also", "too"],
 	"Verbs" : ["Accept","Accuse","Achieve","Acknowledge","Acquire","Adapt","Add","Adjust","Admire","Admit","Adopt","Adore",
 		"Advise","Afford","Agree","Aim","Allow","Announce","Anticipate","Apologize","Appear","Apply","Appreciate","Approach",
 		"Approve","Argue","Arise","Arrange","Arrive","Ask","Assume","Assure","Astonish","Attach","Attempt","Attend","Attract",
@@ -94,7 +96,7 @@
 		"Commit","Communicate","Compare","Compete","Complain","Complete","Concern","Confirm","Consent","Consider","Consist",
 		"Consult","Contain","Continue","Convince","Cook","Cost","Count","Crawl","Create","Creep","Criticize","Cry","Cut",
 		"Dance","Dare","Deal","Decide","Defer","Delay","Deliver","Demand","Deny","Depend","Describe","Deserve","Desire",
-		"Destroy","Determine","Develop","Differ","Disagree","Discover","Discuss","Dislike","Distribute","Dive","Do","Doubt",
+		"Destroy","Determine","Develop","Differ","Disagree","Discover","Discuss","Dislike","Distribute","Dive","Do", "Did", "Doubt",
 		"Drag","Dream","Drill","Drink","Drive","Drop","Dry","Earn","Eat","Emphasize","Enable","Encourage","Engage","Enhance",
 		"Enjoy","Ensure","Entail","Enter","Establish","Examine","Exist","Expand","Expect","Experiment","Explain",
 		"Explore","Extend","Fail","Fall","Feed","Feel","Fight","Find","Finish","Fit","Fly","Fold","Follow","Forbid","Forget",
